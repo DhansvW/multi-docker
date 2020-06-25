@@ -8,7 +8,7 @@ before_install:
 
 script:
  # - docker run -e CI=true dhansvw/react-test npm test
-  - docker run dhansvw/react-test npm-test -- --coverage
+  - docker run dhansvw/react-test npm test -- --coverage
 
 after_success:
   - docker build -t dhansvw/multi-client ./client
